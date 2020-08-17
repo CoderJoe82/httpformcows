@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Mooo!{% endblock %}
+
+
+{% block content %}
+    <h1>Welcome to the Django Cowsay!</h1>
+    <h2>Lastest submitted lines of text:</h2>
+
+    {% for cow in previous_cows %}
+       <pre> {{cow}} </pre>
+    {% endfor %}
+  
+<a href="{% url 'home' %}">Back Home</a>
+    
+
+{% endblock %}
